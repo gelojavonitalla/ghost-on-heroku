@@ -42,10 +42,10 @@ config = {
     mail: {
       transport: 'SMTP',
       options: {
-        service: 'Mailgun',
+        service: process.env.EMAIL_SERVICE,
         auth: {
-          user: process.env.MAILGUN_SMTP_LOGIN,
-          pass: process.env.MAILGUN_SMTP_PASSWORD
+          user: process.env.EMAIL_LOGIN,
+          pass: process.env.EMAIL_PASSWORD
         }
       }
     },
